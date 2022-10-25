@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Task2 {
     public static void main(String[] args) {
-        int count = 0; // count - переманная счетчик
+        int count = 0; // count - переманная счетчик.
         Scanner scanner = new Scanner(System.in);// Объявили сканнер для ввода данных (чисел)
         int n = scanner.nextInt(); // n - количество чисел которые хочет ввести пользователь
                                   // Метод nextInt() считывает и возвращает введенное число
