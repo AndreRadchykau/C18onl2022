@@ -40,10 +40,8 @@ public class HomeWork {
     public static int max(int a, int b) {
         if (a > b) {
             return a;
-        } else if (a < b) {
-            return b;
         }
-        return 0;
+        return b;
     }
 
     /**
@@ -57,7 +55,7 @@ public class HomeWork {
     public static double average(int[] array) {
         int sum = 0;
         for (int a : array) {
-            sum++;
+            sum = sum + a;
         }
         return (double) sum / array.length;
     }
