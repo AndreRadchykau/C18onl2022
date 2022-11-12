@@ -26,16 +26,16 @@ public class DopHomeWork {
      */
     private static void printArray() {
         Scanner scanner = new Scanner(System.in);
-        int count1;
+        int countOne;
         do {
             System.out.println("Введите положительное число");
             while (!scanner.hasNextInt()) {
                 System.out.println("Ошибка, введите число заново");
                 scanner.next();
             }
-            count1 = scanner.nextInt();
-        } while (count1 < 0);
-        int[] array = new int[count1];
+            countOne = scanner.nextInt();
+        } while (countOne < 0);
+        int[] array = new int[countOne];
         Random random = new Random();
         for (int a = 0; a < array.length; a++) {
             array[a] = random.nextInt();
@@ -87,7 +87,13 @@ public class DopHomeWork {
      * @param count - количество программистов
      */
     public static void countDevs(int count) {
-        // тут пишем логику
+        if (count % 10 == 0 || count % 10 == 9 || count % 100 == 11 || count % 100 == 12 || count % 100 == 13 || count % 100 == 14 || count % 100 == 15 || count % 100 == 16 || count % 100 == 17 || count % 100 == 18 || count % 100 == 19) {
+            System.out.println(count + " программистов");
+        } else if (count % 10 == 5 || count % 10 == 6 || count % 10 == 7) {
+            System.out.println(count + " программиста");
+        } else {
+            System.out.println(count + " программист");
+        }
     }
 
     /**
@@ -118,11 +124,13 @@ public class DopHomeWork {
             int k = 0;
 
             for (j = 2; j <= i; j++) {
-                if ((i % j) == 0)
+                if ((i % j) == 0) {
                     k++;
+                }
             }
-            if (k < 2)
+            if (k < 2) {
                 System.out.println(i + " - простое число.");
+            }
         }
     }
 }
