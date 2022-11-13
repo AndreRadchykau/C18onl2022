@@ -98,7 +98,7 @@ public class DopHomeWork {
     public static void countDevs(int count) {
         int c10 = count % 10;
         int c100 = count % 100;
-        if (c10 == 0 || c10 >= 5 || c100 == 11 || c100 == 12 || c100 == 13 || c100 == 14) {
+        if (c10 == 0 || c10 >= 5 || c100 >= 11 && c100 <= 14) {
             System.out.println(count + " программистов");
         } else if (c10 >= 2 && c10 <= 4) {
             System.out.println(count + " программиста");
