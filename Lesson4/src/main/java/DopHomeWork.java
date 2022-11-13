@@ -16,7 +16,7 @@ public class DopHomeWork {
         countDevs(98);
         countDevs(239);
         countDevs(345);
-        countDevs(447);
+        countDevs(444);
         countDevs(686);
         countDevs(777);
         foobar(6);
@@ -96,9 +96,11 @@ public class DopHomeWork {
      * @param count - количество программистов
      */
     public static void countDevs(int count) {
-        if (count % 10 == 0 || count % 10 == 5 || count % 10 == 6 || count % 10 == 7 || count % 10 == 8 || count % 10 == 9 || count % 100 == 11 || count % 100 == 12 || count % 100 == 13 || count % 100 == 14) {
+        int c10 = count % 10;
+        int c100 = count % 100;
+        if (c10 == 0 || c10 >= 5 || c100 == 11 || c100 == 12 || c100 == 13 || c100 == 14) {
             System.out.println(count + " программистов");
-        } else if (count % 10 == 2 || count % 10 == 3 || count % 10 == 4) {
+        } else if (c10 >= 2 && c10 <= 4) {
             System.out.println(count + " программиста");
         } else {
             System.out.println(count + " программист");
