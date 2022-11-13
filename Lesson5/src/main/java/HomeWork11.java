@@ -20,6 +20,8 @@ public class HomeWork11 {
             System.out.println(a + " - это положительное число, " + "количество цифр = " + length);
         } else if (a < 0) {
             System.out.println(a + " - это отрицательное, " + "количество цифр = " + length);
+        } else {
+            System.out.println(a + " - null exception");
         }
     }
 }

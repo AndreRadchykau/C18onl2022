@@ -1,13 +1,34 @@
-public class HomeWork12 {
-    //        5) Напишите реализацию метода summ(int a, int b), вычисляющий a*b, не пользуясь операцией
+import java.util.Scanner;
+
+//        5) Напишите реализацию метода summ(int a, int b), вычисляющий a*b, не пользуясь операцией
 //        умножения, где a и b целые числа, вызовите метод summ  в методе main и распечатайте на консоль.
-    public static void main(String[] args) {
-        int a = 54;
-        int b = 5;
-        int summ = 0;
-        for (int i = 1; i <= b; i++) {
-            summ += a;
+public class HomeWork12 {
+    private static long calculate(long a, long b) {
+        if (a == 0 || b == 0) {
+            return 0;
         }
-        System.out.println(summ);
+        boolean negative = false;
+        if (a < 0) {
+            negative = true;
+            a = -a;
+        }
+        if (b < 0) {
+            negative = !negative;
+            b = -b;
+        }
+        int result = 0;
+        for (int i = 1; i <= a; ++i) {
+            result += b;
+        }
+        return negative ? -result : result;
+    }
+
+    public static void main(final String[] args) {
+        final Scanner scanner = new Scanner(System.in);
+        System.out.println("Введите первое число : ");
+        final long a = scanner.nextInt();
+        System.out.println("Введите второе число : ");
+        final long b = scanner.nextInt();
+        System.out.println("Ответ : " + calculate(a, b));
     }
 }

@@ -4,7 +4,7 @@ public class HomeWork9 {
 //        Если число равно 1, выводим на консоль “Понедельник”, 2 –”Вторник” и так далее.
 //        Если 6 или 7 – “Выходной”.
     public static void main(String[] args) {
-        int week = (int) (Math.random() * (7 - 1) + 1);
+        int week = (int) (Math.random() * 7) + 1;
         switch (week) {
             case 1 -> System.out.println("Monday");
             case 2 -> System.out.println("Tuesday");
