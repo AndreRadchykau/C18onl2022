@@ -8,8 +8,17 @@ public class DopHomeWork {
         System.out.println(operation(1));
         System.out.println(operation(0));
         System.out.println(calculateCountOfOddElementsInMatrix(new int[]{1, 2, 3, 4, 5, 6}));
-        countDevs(103);
+        countDevs(1);
+        countDevs(2);
         countDevs(11);
+        countDevs(13);
+        countDevs(50);
+        countDevs(98);
+        countDevs(239);
+        countDevs(345);
+        countDevs(447);
+        countDevs(686);
+        countDevs(777);
         foobar(6);
         foobar(10);
         foobar(15);
@@ -87,13 +96,14 @@ public class DopHomeWork {
      * @param count - количество программистов
      */
     public static void countDevs(int count) {
-        if (count % 10 == 0 || count % 10 == 9 || count % 100 == 11 || count % 100 == 12 || count % 100 == 13 || count % 100 == 14 || count % 100 == 15 || count % 100 == 16 || count % 100 == 17 || count % 100 == 18 || count % 100 == 19) {
+        if (count % 10 == 0 || count % 10 == 5 || count % 10 == 6 || count % 10 == 7 || count % 10 == 8 || count % 10 == 9 || count % 100 == 11 || count % 100 == 12 || count % 100 == 13 || count % 100 == 14) {
             System.out.println(count + " программистов");
-        } else if (count % 10 == 5 || count % 10 == 6 || count % 10 == 7) {
+        } else if (count % 10 == 2 || count % 10 == 3 || count % 10 == 4) {
             System.out.println(count + " программиста");
         } else {
             System.out.println(count + " программист");
         }
+
     }
 
     /**
