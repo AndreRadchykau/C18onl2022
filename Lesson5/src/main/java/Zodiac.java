@@ -17,11 +17,7 @@ public class Zodiac {
             default -> null;
         };
     }
-
     static boolean checkDay(int day, int from, int to) {
         return day >= from && day <= to;
     }
 }
-
-
-

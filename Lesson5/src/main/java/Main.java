@@ -12,15 +12,3 @@ public class Main {
         System.out.println("Знак зодиака - " + name);
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
