@@ -1,8 +1,7 @@
 import java.util.Scanner;
-
 //        5) Напишите реализацию метода summ(int a, int b), вычисляющий a*b, не пользуясь операцией
 //        умножения, где a и b целые числа, вызовите метод summ  в методе main и распечатайте на консоль.
-public class HomeWork12 {
+public class HomeWork_5 {
     private static long calculate(long a, long b) {
         if (a == 0 || b == 0) {
             return 0;
@@ -22,7 +21,6 @@ public class HomeWork12 {
         }
         return negative ? -result : result;
     }
-
     public static void main(final String[] args) {
         final Scanner scanner = new Scanner(System.in);
         System.out.println("Введите первое число : ");

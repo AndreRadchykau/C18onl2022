@@ -9,6 +9,10 @@ public class Main {
         int month = scanner.nextInt();
         Zodiac zodiac = new Zodiac();
         String name = zodiac.getZodiacName(month, day);
-        System.out.println("Знак зодиака - " + name);
+        if (name != null) {
+            System.out.println("Знак зодиака - " + name);
+        } else {
+            System.out.println("Не корректные данные");
+        }
     }
 }
