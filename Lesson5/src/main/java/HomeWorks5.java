@@ -1,7 +1,7 @@
 import java.util.Scanner;
 //        5) Напишите реализацию метода summ(int a, int b), вычисляющий a*b, не пользуясь операцией
 //        умножения, где a и b целые числа, вызовите метод summ  в методе main и распечатайте на консоль.
-public class HomeWork_5 {
+public class HomeWorks5 {
     private static long calculate(long a, long b) {
         if (a == 0 || b == 0) {
             return 0;
