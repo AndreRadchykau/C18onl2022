@@ -1,31 +1,80 @@
-import java.util.Scanner;
+import java.util.Arrays;
+
 public class HomeWork11 {
-    //    11) Проверить, различны ли все элементы массива, если не различны то вывести элемент повторяющийся
+    //        11) Проверить, различны ли все элементы массива, если не различны то вывести элемент повторяющийся
 //        Пример: {0,3,46,3,2,1,2}
 //        Массив имеет повторяющиеся элементы 3, 2
 //        Пример: {0,34,46,31,20,1,28}
 //        Массив не имеет повторяющихся элементов
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Введите размер последовательностей:");
-        int j = scanner.nextInt();
-        int a[] = new int[j];
-        int b[] = new int[j];
-        System.out.println("Введите первую числовую последовательность:");
-        for (int i = 0; i < j; i++) {
-            a[i] = scanner.nextInt();
+        checkRepeat(new int[]{3, 2, 46, 3, 2, 1, 2});
+        System.out.println();
+        checkRepeat(new int[]{1, 1, 1, 1, 1, 1, 1});
+        System.out.println();
+        checkRepeat(new int[]{1, 1, 1, 4, 5, 5,});
+        System.out.println();
+        checkRepeat2(new int[]{3, 2, 46, 3, 2, 1, 2});
+        System.out.println();
+        checkRepeat2(new int[]{1, 1, 1, 1, 1, 1, 1});
+        System.out.println();
+        checkRepeat2(new int[]{1, 1, 1, 4, 5, 5, 5});
+    }
+
+    public static void checkRepeat2(int[] mass) {
+        if (mass != null && mass.length > 2) {
+            String[] arrayRepeatedElements = new String[mass.length];//3 2 null
+            int indexRepeated = 0;
+            for (int i = 0; i < mass.length; i++) {
+                for (int j = i + 1; j < mass.length; j++) {
+                    if (mass[i] == mass[j] && !checkDuplicateElement(mass[i], arrayRepeatedElements)) {
+                        arrayRepeatedElements[indexRepeated] = mass[i] + "";
+                        indexRepeated++;
+                        break;
+                    }
+                }
+            }
+            if (arrayRepeatedElements[0] != null) {
+                System.out.print("Массив имеет повторяющиеся элементы ");
+                for (String element : arrayRepeatedElements) {
+                    if (element != null) {
+                        System.out.print(element + ", ");
+                    } else {
+                        break;
+                    }
+                }
+                System.out.print("\b\b");
+            } else {
+                System.out.print("Массив не имеет повторяющихся элементов");
+            }
         }
-        System.out.println("Введите вторую числовую последовательность");
-        for (int k = 0; k < j; k++) {
-            b[k] = scanner.nextInt();
+    }
+
+    private static boolean checkDuplicateElement(int value, String[] array) {
+        for (String element : array) {
+            if (element != null && element.equals(String.valueOf(value))) {
+                return true;
+            }
         }
-        int different = 0;
-        for (int i = 0; i < j; i++) {
-            if (a[i] == b[i]) {
-                System.out.println("Одинаковые элементы: " + " " + a[i] + "-" + b[i]);
-                different++;
+        return false;
+    }
+
+
+    public static void checkRepeat(int[] mass) {
+        if (mass != null && mass.length > 2) {
+            Arrays.sort(mass); //1 1 1 1 3 3 3 5 6
+            boolean isRepeated = false;
+            for (int i = 0, j = i + 1; j < mass.length; j++, i++) {
+                if (mass[i] == mass[j]) {
+                    if (!isRepeated) {
+                        System.out.print(mass[i] + " ");
+                        isRepeated = true;
+                    }
+                } else {
+                    isRepeated = false;
+                }
             }
         }
     }
 }
+
 
