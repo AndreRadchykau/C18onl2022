@@ -10,7 +10,6 @@ public class Main {
             if (computer.theBurned()) {
                 break;
             }
-
         }
         computer.on();
         computer.off();
