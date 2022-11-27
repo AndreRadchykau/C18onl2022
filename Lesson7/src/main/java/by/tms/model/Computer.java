@@ -35,7 +35,7 @@ public class Computer {
     public void on() {
         if (!burned) {
             int inputNumber = inputNumber();
-            int count = 0;
+            int count = random.nextInt(2);
             if (inputNumber == count) {
                 off();
             } else {
@@ -68,7 +68,6 @@ public class Computer {
     public void off() {
         if (!burned && resource != 0) {
             System.out.println("Выключение");
-            scanner.nextInt();
         } else {
             System.out.println("Компьютер сгорел!");
         }
