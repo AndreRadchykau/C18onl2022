@@ -10,7 +10,6 @@ import static by.tms.utils.Constants.MALE;
 
 public class Main {
     public static void main(String[] args) {
-
         Person[] people = new Person[10];
         people[0] = new Person("Александр", 25, MALE, new Address("Belarus", "Гродно"));
         people[1] = new Person("Сергей", 25, MALE, new Address("Belarus", "Минск"));
