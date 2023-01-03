@@ -10,6 +10,6 @@ import lombok.ToString;
 @ToString
 @AllArgsConstructor
 public class Flower {
-    String flowerName;
-    int flowerCost;
+     private String flowerName;
+     private int flowerCost;
 }
