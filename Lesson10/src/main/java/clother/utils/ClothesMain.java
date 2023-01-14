@@ -15,7 +15,6 @@ import static clother.PersonType.WOMAN;
 public class ClothesMain {
     public static void main(String[] args) {
         ArrayList<Clothes> clothesArrayList = new ArrayList<>();
-//        clothesArrayList.add(createClothes(TEST, "красный", XXS, 50));
         clothesArrayList.add(createClothes(CRAVAT, "синий", XS, 6));
         clothesArrayList.add(createClothes(SKIRT, "жёлтый", S, 50));
         clothesArrayList.add(createClothes(TSHIRT, "чёрный", M, 7));

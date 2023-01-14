@@ -4,8 +4,6 @@ import shuttle.start.IStart;
 
 import java.util.concurrent.TimeUnit;
 
-;
-
 public class SpasePort {
 
     public SpasePort() {
