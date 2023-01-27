@@ -12,7 +12,7 @@ public class Animal implements IsAnimal, Serializable {
     private int age;
 
     @Override
-    public void goy() {
+    public void go() {
         System.out.println("Коллопортус");
 
     }
